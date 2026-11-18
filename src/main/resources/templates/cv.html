@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume | Shakti</title>
+ <!-- Favicon Icon -->
+    <link rel="icon" type="image/png"
+          href="/PortfolioProfile/image/favicon.png">
+
+<style>
+:root {
+	--primary: #176b87;
+	--dark: #172b3a;
+	--muted: #64748b;
+	--light: #f0f7fa;
+	--border: #e2eaf0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Segoe UI", Arial, sans-serif;
+	background: #eaf0f5;
+	color: var(--dark);
+	padding: 35px 15px;
+	line-height: 1.6;
+}
+
+.resume {
+	max-width: 1000px;
+	margin: auto;
+	background: white;
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 0 20px 60px rgba(20, 45, 65, 0.13);
+	animation: appear 0.7s ease;
+}
+
+/* HEADER */
+.header {
+	background: linear-gradient(125deg, #102a43, #176b87);
+	color: white;
+	padding: 42px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	position: relative;
+}
+
+.profile {
+	width: 145px;
+	height: 145px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 5px solid rgba(255, 255, 255, 0.8);
+	background: white;
+	flex-shrink: 0;
+}
+
+.header-info h1 {
+	font-size: 36px;
+	line-height: 1.2;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+
+.header-info h3 {
+	color: #b9e8f6;
+	font-weight: 500;
+	margin-bottom: 14px;
+}
+
+.header-info p {
+	font-size: 13px;
+	color: #e3f2f8;
+	overflow-wrap: anywhere;
+}
+
+.header-info a {
+	color: white;
+	text-decoration: none;
+}
+
+/* CONTENT */
+.content {
+	display: grid;
+	grid-template-columns: 32% 68%;
+}
+
+.sidebar {
+	background: #f4f8fb;
+	padding: 32px 25px;
+	border-right: 1px solid var(--border);
+}
+
+.main {
+	padding: 32px;
+}
+
+.section {
+	margin-bottom: 27px;
+}
+
+.section-title {
+	font-size: 17px;
+	color: var(--primary);
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	padding-bottom: 9px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #d9eaf0;
+	position: relative;
+}
+
+.section-title::after {
+	content: "";
+	display: block;
+	width: 45px;
+	height: 3px;
+	background: var(--primary);
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+}
+
+.contact-item {
+	font-size: 12px;
+	margin-bottom: 13px;
+	overflow-wrap: anywhere;
+}
+
+.contact-item strong {
+	display: block;
+	color: var(--dark);
+	font-size: 12px;
+}
+
+.contact-item a {
+	color: var(--muted);
+	text-decoration: none;
+}
+
+.skill {
+	margin-bottom: 14px;
+}
+
+.skill-name {
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.skill-bar {
+	height: 6px;
+	background: #dce7ed;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.skill-level {
+	height: 100%;
+	width: 75%;
+	background: linear-gradient(90deg, #176b87, #52b7cb);
+	border-radius: 10px;
+}
+
+.tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 7px;
+}
+
+.tag {
+	font-size: 11px;
+	background: #e1f0f5;
+	color: #155e75;
+	padding: 5px 9px;
+	border-radius: 5px;
+}
+
+.item {
+	margin-bottom: 23px;
+	padding-left: 17px;
+	border-left: 2px solid #d7e8ef;
+	position: relative;
+}
+
+.item::before {
+	content: "";
+	position: absolute;
+	left: -6px;
+	top: 5px;
+	width: 10px;
+	height: 10px;
+	background: var(--primary);
+	border-radius: 50%;
+}
+
+.item h3 {
+	font-size: 16px;
+	margin-bottom: 3px;
+}
+
+.item h4 {
+	font-size: 13px;
+	color: var(--primary);
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+
+.date {
+	display: inline-block;
+	color: var(--muted);
+	font-size: 11px;
+	margin-bottom: 6px;
+}
+
+.item p, .item li {
+	color: #536579;
+	font-size: 12px;
+}
+
+.item ul {
+	padding-left: 17px;
+	margin-top: 7px;
+}
+
+.summary {
+	font-size: 13px;
+	color: #536579;
+	text-align: justify;
+}
+
+.footer {
+	padding: 17px;
+	text-align: center;
+	color: #728397;
+	font-size: 11px;
+	border-top: 1px solid var(--border);
+}
+
+.actions {
+	max-width: 1000px;
+	margin: 0 auto 18px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.btn {
+	border: none;
+	background: var(--primary);
+	color: white;
+	padding: 11px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+	transition: 0.25s;
+}
+
+.btn:hover {
+	background: #104d63;
+	transform: translateY(-2px);
+}
+
+.btn.secondary {
+	background: white;
+	color: var(--primary);
+	border: 1px solid #cbdce5;
+}
+
+@keyframes appear {from { opacity:0;
+	transform: translateY(15px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+@media ( max-width : 650px) {
+	body {
+		padding: 12px 7px;
+	}
+	.header {
+		padding: 28px 18px;
+		flex-direction: column;
+		text-align: center;
+		gap: 16px;
+	}
+	.profile {
+		width: 115px;
+		height: 115px;
+	}
+	.header-info h1 {
+		font-size: 28px;
+	}
+	.content {
+		grid-template-columns: 1fr;
+	}
+	.sidebar, .main {
+		padding: 24px 20px;
+	}
+	.actions {
+		justify-content: center;
+	}
+}
+
+/* PRINT / SAVE AS PDF */
+@media print {
+	@page {
+		size: A4;
+		margin: 8mm;
+	}
+	body {
+		padding: 0;
+		background: white;
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+	.actions {
+		display: none !important;
+	}
+	.resume {
+		width: 100%;
+		max-width: none;
+		box-shadow: none;
+		border-radius: 0;
+		animation: none;
+	}
+	.header {
+		padding: 25px;
+		break-inside: avoid;
+	}
+	.profile {
+		width: 110px;
+		height: 110px;
+	}
+	.header-info h1 {
+		font-size: 29px;
+	}
+	.sidebar {
+		padding: 22px 18px;
+	}
+	.main {
+		padding: 22px;
+	}
+	.section {
+		margin-bottom: 19px;
+	}
+	.item {
+		margin-bottom: 16px;
+	}
+	.section, .item {
+		break-inside: avoid;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+</style>
+</head>
+
+<body>
+
+	<div class="actions">
+		<button class="btn secondary" onclick="history.back()">← Back
+		</button>
+		<button class="btn" onclick="window.print()">↓ Download /
+			Print PDF</button>
+	</div>
+
+	<div class="resume">
+
+		<!-- HEADER -->
+		<header class="header">
+
+			<!-- Replace this image path with your actual photo -->
+			<img class="profile" src="/PortfolioProfile/image/shky.jpg"
+				alt="Profile Photo" onerror="this.style.display='none'">
+
+			<div class="header-info">
+				<h1>SHAKTI GIRI</h1>
+				<h3>Java Back-end Developer | Web Developer</h3>
+
+				<p>📍 Varanasi, Uttar Pradesh, India</p>
+
+				<p>
+					✉ <a href="mailto:yourmail@gmail.com"> shaktigiri00@gmail.com </a>
+				</p>
+
+				<p>☎ +91 9161052193</p>
+
+				<p>
+					🌐 <a href="https://github.com/shaktig0swami"> GitHub </a> &nbsp; |
+					&nbsp; <a href="https://linkedin.com/in/shaktigiri00"> LinkedIn
+					</a>
+				</p>
+			</div>
+		</header>
+
+		<div class="content">
+
+			<!-- LEFT SIDEBAR -->
+			<aside class="sidebar">
+
+				<section class="section">
+					<h2 class="section-title">Contact</h2>
+
+					<div class="contact-item">
+						<strong>Email</strong> <a href="mailto:yourmail@gmail.com">
+							shaktigiri00@gmail.com </a>
+					</div>
+
+					<div class="contact-item">
+						<strong>Phone</strong> +91 9161052193
+					</div>
+
+					<div class="contact-item">
+						<strong>Location</strong> Varanasi, Uttar Pradesh
+					</div>
+
+					<div class="contact-item">
+						<strong>Portfolio</strong> yourportfolio.com
+					</div>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Technical Skills</h2>
+
+					<div class="skill">
+						<div class="skill-name">
+							<span>Java</span><span>95%</span>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-level" style="width: 95%"></div>
+						</div>
+					</div>
+
+					<div class="skill">
+						<div class="skill-name">
+							<span>Spring Boot</span><span>90%</span>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-level" style="width: 90%"></div>
+						</div>
+					</div>
+
+					<div class="skill">
+						<div class="skill-name">
+							<span>HTML & CSS</span><span>85%</span>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-level" style="width: 85%"></div>
+						</div>
+					</div>
+
+					<div class="skill">
+						<div class="skill-name">
+							<span>JavaScript</span><span>65%</span>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-level" style="width: 65%"></div>
+						</div>
+					</div>
+
+					<div class="skill">
+						<div class="skill-name">
+							<span>SQL / MySQL</span><span>85%</span>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-level" style="width: 85%"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Tools</h2>
+
+					<div class="tag-list">
+						<span class="tag">Eclipse IDE</span> <span class="tag">Git</span>
+						<span class="tag">GitHub</span> <span class="tag">Maven</span> <span
+							class="tag">Apache Tomcat</span> <span class="tag">MySQL</span>
+					</div>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Soft Skills</h2>
+
+					<div class="tag-list">
+						<span class="tag">Teamwork</span> <span class="tag">Problem
+							Solving</span> <span class="tag">Communication</span> <span class="tag">Time
+							Management</span>
+					</div>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Languages</h2>
+					<p style="font-size: 13px; margin-bottom: 7px;">Hindi</p>
+					<p style="font-size: 13px;">English — Basic / Intermediate</p>
+				</section>
+
+			</aside>
+
+			<!-- RIGHT MAIN CONTENT -->
+			<main class="main">
+
+				<section class="section">
+					<h2 class="section-title">Professional Summary</h2>
+
+					<p class="summary">Motivated Java Developer with knowledge of
+						Core Java, OOP concepts, Spring MVC, JSP, HTML, CSS, JavaScript
+						and MySQL. Interested in developing responsive web applications,
+						writing clean code and solving real-world problems. Eager to learn
+						new technologies and contribute to a professional development
+						team.</p>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Work Experience</h2>
+
+					<div class="item">
+						<h3>Java Development Trainee</h3>
+						<h4>CETPA Infotech / Training Institute</h4>
+						<span class="date">2026 – Present</span>
+
+						<ul>
+							<li>Learning Java and enterprise application development.</li>
+							<li>Practicing Spring Boot/MVC, JSP and Hibernate.</li>
+							<li>Building web pages connected to a MySQL database.</li>
+							<li>Debugging application errors and improving code quality.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Projects</h2>
+
+					<div class="item">
+						<h3>Employee Management System</h3>
+						<h4>Java · Spring MVC · Hibernate · JSP · MySQL</h4>
+
+						<p>Developed an employee management application to create,
+							view, update and delete employee records. Used MVC architecture
+							and database integration to manage employee information.</p>
+					</div>
+
+					<div class="item">
+						<h3>Personal Portfolio Website</h3>
+						<h4>HTML · CSS · JavaScript · JSP</h4>
+
+						<p>Designed a responsive personal portfolio with About,
+							Projects, Services and Contact sections to showcase technical
+							skills and development work.</p>
+					</div>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Education</h2>
+
+					<div class="item">
+						<h3>Your Degree / Qualification</h3>
+						<h4>Your College / University Name</h4>
+						<span class="date">Year – Year</span>
+						<p>Percentage / CGPA: Add your actual score.</p>
+					</div>
+
+					<div class="item">
+						<h3>Intermediate (12th)</h3>
+						<h4>Your School Name</h4>
+						<span class="date">Passing Year</span>
+					</div>
+
+					<div class="item">
+						<h3>High School (10th)</h3>
+						<h4>Your School Name</h4>
+						<span class="date">Passing Year</span>
+					</div>
+				</section>
+
+				<section class="section">
+					<h2 class="section-title">Career Objective</h2>
+
+					<p class="summary">To start my career as a Java Developer in a
+						growth-oriented organization where I can apply my programming
+						skills, learn from experienced professionals and contribute to
+						building reliable software applications.</p>
+				</section>
+
+			</main>
+		</div>
+
+		<footer class="footer"> SHAKTI · JAVA DEVELOPER ·
+			PROFESSIONAL RESUME </footer>
+	</div>
+</body>
+</html>

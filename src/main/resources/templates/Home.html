@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shakti | Portfolio</title>
+<!-- Favicon Icon -->
+    <link rel="icon" type="image/png"
+          href="/PortfolioProfile/image/favicon.png">
+
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<script th:src="@{/js/script.js}" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+	<!-- NAVBAR -->
+	<header>
+		<div class="container navbar">
+			<a href="#home" class="logo">Shakti<span>.dev</span></a>
+			<button class="menu-btn" id="menuBtn" aria-label="Toggle navigation"
+				aria-expanded="false">
+				<i class="fas fa-bars"></i>
+			</button>
+			<ul class="nav-links" id="navLinks">
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Project</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- HOME -->
+	<section class="hero" id="home">
+		<div class="container hero-content">
+			<span class="hello"> <i class="fas fa-circle"
+				style="font-size: 8px"></i> Welcome to my portfolio
+			</span>
+
+			<h1>
+				Hello, I'm <span class="gradient-text">Shakti</span>
+			</h1>
+			<h1>
+				Aspiring <span class="gradient-text">Java BackEnd Developer</span>
+			</h1>
+
+			<p>I create modern, responsive and user-friendly websites. I
+				enjoy turning ideas into digital experiences using Java, Spring MVC,
+				HTML, CSS and JavaScript.</p>
+
+			<div class="hero-buttons">
+				<a href="#projects" class="btn btn-primary"> View My Projects <i
+					class="fas fa-arrow-right"></i>
+				</a> <a href="#contact" class="btn btn-outline"> <i
+					class="fas fa-paper-plane"></i> Contact Me
+				</a>
+			</div>
+
+			<div class="hero-bottom">
+				<i class="fas fa-code"></i> Building my skills, one project at a
+				time
+			</div>
+		</div>
+	</section>
+
+	<!-- ABOUT -->
+	<section id="about">
+		<div class="container">
+			<h2 class="section-title">
+				About <span>Me</span>
+			</h2>
+			<p class="section-subtitle">Get to know me better</p>
+
+			<div class="about-grid reveal">
+				<div class="about-photo">
+					<img src="/PortfolioProfile/image/shakti.jpg"
+						alt="Shakti profile photo">
+				</div>
+
+				<div class="about-content">
+					<h3>
+						I'm Shakti, a <span class="gradient-text">Java BackEnd
+							Developer</span>
+					</h3>
+
+					<p>I am passionate Java Backend Developer who enjoys building
+						reliable, efficient, and user-friendly web applications. I have a
+						strong interest in software development and continuously work on
+						improving my programming skills through practical projects and
+						hands-on experience.</p>
+
+					<p>My current focus is on Java, Spring Boot, JSP, HTML, CSS,
+						JavaScript, and database integration. I enjoy developing backend
+						functionality, implementing business logic, and connecting
+						applications with databases to create smooth and efficient user
+						experiences. I believe in writing clean, maintainable, and
+						well-structured code while following good development practices.
+						My goal is to grow as a skilled software developer, contribute to
+						meaningful projects, and build scalable web applications that
+						solve real-world problems.</p>
+
+					<div class="about-tags">
+
+						<span class="tag">Spring Boot</span> <span class="tag">AWS</span>
+						<span class="tag">Microservices</span> <span class="tag">REST
+							APIs</span>
+						<!-- 
+						<span class="tag">JavaScript</span> 
+						<span class="tag">SQL</span> 
+						-->
+					</div>
+
+					<div class="about-buttons">
+						<a href="/PortfolioProfile/cv" class="btn btn-primary"> <i
+							class="fas fa-download"></i> Download CV
+						</a> <a href="#contact" class="btn btn-outline">Hire Me</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- PROJECTS -->
+	<section id="projects">
+		<div class="container">
+			<h2 class="section-title">
+				My <span>Projects</span>
+			</h2>
+			<p class="section-subtitle">A selection of projects and skills
+				I'm developing</p>
+
+			<div class="stats reveal">
+				<div class="stat-card">
+					<h3>
+						<span class="counter" data-target="5">0</span>+
+					</h3>
+					<p>Projects Completed</p>
+				</div>
+				<div class="stat-card">
+					<h3>
+						<span class="counter" data-target="6">0</span>+
+					</h3>
+					<p>Technologies Learned</p>
+				</div>
+				<div class="stat-card">
+					<h3>
+						<span class="counter" data-target="100">0</span>%
+					</h3>
+					<p>Learning Mindset</p>
+				</div>
+				<div class="stat-card">
+					<h3>
+						<span class="counter" data-target="24">0</span>/7
+					</h3>
+					<p>Curiosity to Learn</p>
+				</div>
+			</div>
+
+			<div class="project-grid">
+				<article class="project-card reveal">
+					<div class="project-icon">
+						<i class="fas fa-user-tie"></i>
+					</div>
+					<h3>Personal Portfolio</h3>
+					<p>A responsive personal website showcasing my profile,
+						technical skills, services and projects.</p>
+					<div class="project-tech">HTML · CSS · JavaScript</div>
+					<a href="#contact" class="project-link"> Discuss Project <i
+						class="fas fa-arrow-right"></i>
+					</a>
+				</article>
+
+				<article class="project-card reveal">
+					<div class="project-icon">
+						<i class="fas fa-users"></i>
+					</div>
+					<h3>Employee Management</h3>
+					<p>A web application concept for adding, viewing, updating and
+						deleting employee records.</p>
+					<div class="project-tech">Java · Spring MVC · JSP · MySQL</div>
+					<a href="#contact" class="project-link"> Discuss Project <i
+						class="fas fa-arrow-right"></i>
+					</a>
+				</article>
+
+				<article class="project-card reveal">
+					<div class="project-icon">
+						<i class="fas fa-laptop-code"></i>
+					</div>
+					<h3>Janta Bank</h3>
+					<p>Developed a banking application using Java and Spring Boot
+						featuring user registration, login, balance inquiry, deposits,
+						withdrawals, debits, and money transfers..</p>
+					<div class="project-tech">Spring Boot · MySQL · Thymeleaf</div>
+					<a href="#contact" class="project-link"> Discuss Project <i
+						class="fas fa-arrow-right"></i>
+					</a>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- SERVICES -->
+	<section class="services" id="services">
+		<div class="container">
+			<h2 class="section-title">
+				My <span>Services</span>
+			</h2>
+ 			<p class="section-subtitle">Ways I can help bring your ideas to
+				life</p>
+
+			<div class="service-grid">
+				<div class="service-card reveal">
+					<div class="service-icon">
+						<i class="fas fa-code"></i>
+					</div>
+					<h3>Web Development</h3>
+					<p>Developing structured and user-friendly web pages using
+						modern HTML, CSS and JavaScript.</p>
+				</div>
+
+				<div class="service-card reveal">
+					<div class="service-icon">
+						<i class="fas fa-mobile-screen-button"></i>
+					</div>
+					<h3>Responsive Design</h3>
+					<p>Creating layouts that adapt to desktops, tablets and mobile
+						screens.</p>
+				</div>
+
+				<div class="service-card reveal">
+					<div class="service-icon">
+						<i class="fas fa-server"></i>
+					</div>
+					<h3>Backend Development</h3>
+					<p>Building Java and Spring MVC application features, JSP pages
+						and database-connected functionality.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTACT -->
+	<section id="contact">
+		<div class="container">
+			<h2 class="section-title">
+				Contact <span>Me</span>
+			</h2>
+			<p class="section-subtitle">Have an idea? Let's talk about it</p>
+
+			<div class="contact-grid">
+				<div class="contact-info reveal">
+					<h3>
+						Let's work <span class="gradient-text">together</span>
+					</h3>
+					<p>If you have a project, opportunity or question, feel free to
+						get in touch. I'd be happy to connect.</p>
+
+					<div class="contact-item">
+						<i class="fas fa-envelope"></i>
+						<div>
+							<small>Email</small> <span>shaktigiri00gmail.com</span>
+						</div>
+					</div>
+
+					<div class="contact-item">
+						<i class="fas fa-location-dot"></i>
+						<div>
+							<small>Location</small> <span>India</span>
+						</div>
+					</div>
+
+					<div class="contact-item">
+						<i class="fas fa-code"></i>
+						<div>
+							<small>Currently learning</small> <span>Java & Spring MVC</span>
+						</div>
+					</div>
+				</div>
+
+				<form action="/PortfolioProfile/contact" method="post"
+					class="contact-form reveal" id="contactForm">
+					<div class="form-row">
+						<div>
+							<label for="name">Your Name</label> <input type="text" id="name"
+								name="name" placeholder="Enter your name" required>
+						</div>
+						<div>
+							<label for="email">Your Email</label> <input type="email"
+								id="email" name="email" placeholder="Enter your email" required>
+						</div>
+					</div>
+
+					<label for="subject">Subject</label> 
+					<input type="text" id="subject" name="subject" placeholder="What is this about?" required> 
+						<label for="message">Your Message</label>
+					<textarea id="message" name="message"
+						placeholder="Write your message here..." required></textarea>
+
+					<button type="submit" class="btn btn-primary">
+						Send Message   <i class="fas fa-paper-plane"></i> 
+					</button>
+
+					<p id="formStatus" role="status"
+						style="margin-top: 14px; font-size: 13px; color: #c8a9ff"></p>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="footer-top">
+				<div class="footer-brand">
+					<a href="#home" class="logo">Shakti<span>.dev</span></a>
+					<p>An aspiring Java developer passionate about creating
+						responsive websites and useful software applications. Always
+						learning, building and improving.</p>
+
+					<div class="social-links">
+						<a href="https://github.com/shaktig0swami" target="_blank"
+							rel="noopener noreferrer" aria-label="GitHub"> <i
+							class="fab fa-github"></i>
+						</a> <a href="https://www.linkedin.com/in/shaktigiri00" target="_blank"
+							rel="noopener noreferrer" aria-label="LinkedIn"> <i
+							class="fab fa-linkedin-in"></i>
+						</a> <a href="https://www.instagram.com/" target="_blank"
+							rel="noopener noreferrer" aria-label="Instagram"> <i
+							class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+
+				<div>
+					<h3 class="footer-heading">Quick Links</h3>
+					<div class="footer-links">
+						<a href="#home">Home</a> <a href="#about">About Me</a> <a
+							href="#projects">My Projects</a> <a href="#services">Services</a>
+						<a href="#contact">Contact</a>
+					</div>
+				</div>
+
+				<div>
+					<h3 class="footer-heading">My Technologies</h3>
+					<div class="footer-links">
+						<span>Java Programming</span> <span>Spring MVC</span> <span>JSP
+							& Servlets</span> <span>HTML, CSS & JavaScript</span> <span>SQL
+							Database</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>
+					&copy; <span id="year"></span> Shakti.dev All rights reserved.
+				</p>
+				<p>
+					Designed with <i class="fas fa-heart" style="color: #a879ff"></i>
+					and passion.
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
